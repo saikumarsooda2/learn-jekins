@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { node { label 'Workstation' } }
 
     stages {
         stage('Hello') {
@@ -9,10 +9,9 @@ pipeline {
         }
     }
 
-
- post {
-    always {
-     sh 'echo post'
+   post {
+        always {
+            echo 'I will always say Hello again!'
+        }
     }
- }
-
+}
