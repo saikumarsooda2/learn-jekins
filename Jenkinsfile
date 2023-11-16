@@ -4,6 +4,9 @@ pipeline {
     environment {
     SSH = credentials('SSH')
     }
+     options {
+            ansiColor('xterm')
+     }
 
     stages {
         stage('Hello') {
