@@ -6,10 +6,14 @@ pipeline {
     }
      options {
             ansiColor('xterm')
-     }
+      }
 
     stages {
         stage('Hello') {
+      input {
+        message "should we continue?"
+        ok "we should"
+      }
             steps {
                 echo 'Hello World'
                 sh 'env'
