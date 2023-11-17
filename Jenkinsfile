@@ -14,7 +14,7 @@ pipeline {
         message "should we continue?"
         ok "we should"
         parameters {
-        string(name: 'PERSON', defaultValue: '*', description: 'Who I say Hello?')
+        string(name: 'PERSON', defaultValue: 'Enter Your Name please', description: 'Hello Mr shall we run')
         }
       }
             steps {
